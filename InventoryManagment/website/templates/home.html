@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}
+Home
+{% endblock %}#
+{% block content %}
+  <table class="table table-stripped">
+    <thead>
+      <tr>
+        <th scope="col">Equipment Number</th>
+        <th scope="col">Inventory Number</th>
+        <th scope="col">Description</th>
+        <th scope="col">Place</th>
+        <th scope="col">Created</th>
+        <th scope="col">Modified</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in inventory %}
+        <tr>
+          <a> </a>
+          <td>
+            <!-- <a href="/item/{{ item.equipment_number }}" target="_blank"></a> -->
+            <a href="/items/{{ item.equipment_number }}">
+              {{ item.equipment_number }}
+            </a>
+          </td>
+          <td>{{ item.inventory_number }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.place }}</td>
+          <td>{{ item.creation_date }}</td>
+          <td>{{ item.modified_date }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

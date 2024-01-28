@@ -1,0 +1,7 @@
+migration einbauen          https://alembic.sqlalchemy.org/en/latest/
+login für editieren/löschen
+show ansicht                https://auth0.com/blog/best-practices-for-flask-api-development/
+daisyUI
+tailwind
+bootstrap
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/

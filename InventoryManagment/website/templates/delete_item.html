@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Delete Item{% endblock %}
+{% block content %}
+<form method="POST">
+    <h3 align="center">Delete Item</h3>
+    <div class="form-group">
+        <label for="equipment-number">Equipment Nummer</label>
+        <input
+            type="text"
+            class="form-control"
+            id="equipment-number"
+            name="equipment-number"
+            placeholder="Equipment Nummer"
+        />
+    </div>
+    <div class="form-group">
+        <label for="inventory-number">Inventar Nummer</label>
+        <input
+            type="text"
+            class="form-control"
+            id="inventory-number"
+            name="inventory-number"
+            placeholder="Inventar Nummer"
+        />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Bestätigen</button>
+</form>
+{% endblock %}

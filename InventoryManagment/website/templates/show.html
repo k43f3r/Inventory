@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}
+Show Item
+{% endblock %}
+{% block content %}
+<h1 align="center">Item Details</h1>
+    <table align="center" cellpadding="8">
+        <form method="POST" action="/items/{{ item.equipment_number }}">
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td align="left">Equipment Number</td>
+                <td align="left">
+                    <input type="text" name="new_equipment_number" value="{{ item.equipment_number }}">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">Inventory Number</td>
+                <td align="left">
+                    <input type="text" name="new_inventory_number" value="{{ item.inventory_number }}">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">Creation Date</td>
+                <td align="left">{{ item.creation_date }}</td>
+            </tr>
+            <tr>
+                <td align="left">Modified Date</td>
+                <td align="left">{{ item.modified_date }}</td>
+            </tr>
+            <tr>
+                <td align="left">Description</td>
+                <td align="left">
+                    <input type="text" name="new_description" value="{{ item.description }}">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">Place</td>
+                <td align="left">
+                    <input type="text" name="new_place" value="{{ item.place }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-primary">
+                        Update Item
+                    </button>
+                </td>
+            </tr>
+        </form>
+    </table>
+    <a href="/">Back to Inventory</a>
+{% endblock %}
